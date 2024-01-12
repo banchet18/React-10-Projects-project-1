@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 const Home = () => {
+  const [value, setValue] = useState();
+
+  console.log(value);
+
   return (
     <div
       style={{
@@ -35,8 +41,13 @@ const Home = () => {
             type="text"
             placeholder="Add to Do"
             style={{ width: "70%", height: "50px", fontSize: "20px" }}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
           />
-          <button style={{ width: "30%", height: "50px" }}>Add</button>
+          <button onClick={() => {}} style={{ width: "30%", height: "50px" }}>
+            Add
+          </button>
         </div>
         <div
           style={{ border: "2px solid green", width: "70%", height: "50%" }}
